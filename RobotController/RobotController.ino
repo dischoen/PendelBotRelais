@@ -71,5 +71,5 @@ void loop()
   //Wire.beginTransmission(2);
   //Wire.write(inBuf,6);
   //Wire.endTransmission();
-  delay(918);
+  //delay(20);
 }
