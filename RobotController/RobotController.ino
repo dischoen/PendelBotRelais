@@ -22,26 +22,12 @@ void setup() {
   Wire.begin();
   Robot.begin();
   Robot.beginTFT();
-  //robotSerial.begin(76800);
   textManager.setMargin(5,5);
   textManager.writeText(0,0,"HEL.LO");
 }
 
 void loop() 
 {
-  //Robot.digitalWrite(pin, HIGH);
-  //delay(300);
-  //Robot.digitalWrite(pin, LOW);
-
-
-/*  sprintf(textBuf, "P4:%d", digitalRead(p4));
-  textManager.writeText(1,0,textBuf);
-  
-  sprintf(textBuf, "P5:%d", digitalRead(p5));
-  textManager.writeText(2,0,textBuf);
-*/
-  //textManager.writeText(3,4,"HOLLA!");
-  //delay(300);
   i=0;
   Wire.requestFrom(2,6);
   while(Wire.available())
@@ -67,9 +53,5 @@ void loop()
   textManager.writeText(2,0,textBuf2);
   textManager.writeText(3,0,textBuf3);
 
-  //inBuf[5] = 0x99;
-  //Wire.beginTransmission(2);
-  //Wire.write(inBuf,6);
-  //Wire.endTransmission();
-  //delay(20);
+  delay(20);
 }
